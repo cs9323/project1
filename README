@@ -1,3 +1,45 @@
-Repository for cs9323 Project1.
-Aug.19.2011
-Charles
+# THESE ARE ONLY APPLY FOR COMMAND-LINE USE, NOT FOR ECLIPSE
+# for eclipse use, check out "Egit" plugin, follow the tutorial. 
+
+First you need to install git related thing.
+
+Register an account on github.com, not necessary.
+
+sign in github.com as "cs9323", then click on "Account Settings" on the right-top of the window, select "SSH Public Keys". You will see there already is a ssh public key item called Charles, which is mine. You need to "Add another public key", label your name in the "Title", and the key should be generated on your machine as below:
+
+install ssh related packages, then perform:
+        ssh-keygen -t rsa -C "YOUR EMAIL ADDRESS"
+
+hit the Enter everytime it prompts a request, after a funny texture image shows up, you can copy all the information inside the file ~/.ssh/id_rsa.pub, then paste it in the "Key" area inside github page you opened. then click "Add key". Now you are free to update code of cs9323.
+
+then, go to your place you store your code, run the command:
+        git clone git@github.com:cs9323/project1.git
+the address followed by "git clone" can be found on the dashboard of cs9323 account.
+
+then a folder named "project1" will be allocated under your current directory.
+
+cd into "project1", then you will see the existing code or folders, move your files in the right folder, or simply create files in the right folder, then do the coding.
+
+when you want to submit the code, first time you need to run:
+        git config --global user.name="YOUR USERNAME(at github)"
+        git config --global user.email="YOUR EMAIL ADDRESS(same as above address)"
+
+then perform:
+        git add FILE/FOLDER
+
+FILE/FOLDER will be the files or folder you modified or created, which will apply your changes in the whole repository, otherwise your changes cannot be updated. After doing this, perform:
+        git commit -m "COMMIT MESSAGE"
+
+fill in your commit message between double quotes, the COMMIT MESSAGE will be seen in the repository and the git code tree.
+
+finally you need to perform:
+        git push to make sure the local repository is synced with the repository held by github.
+
+Everytime before you want to modify the code or add new files to repository, make sure you perform:        git pull
+
+when there is a warning about multiple or different version conflict, perform:
+        git merge
+
+make sure the new pulled version will not erase your current work, before you answer yes.
+
+after the coding, remember to do the push.
