@@ -3,9 +3,9 @@
 
 First you need to install git related thing.
 
-Register an account on github.com, not necessary.
+Register an account on github.com.
 
-sign in github.com as "cs9323", then click on "Account Settings" on the right-top of the window, select "SSH Public Keys". You will see there already is a ssh public key item called Charles, which is mine. You need to "Add another public key", label your name in the "Title", and the key should be generated on your machine as below:
+sign in github.com as "cs9323", then go to project1, there is a "admin" button, click on it, add yourself as a collaborator, then sign in your account, go to "account settings", generate a public key, then add the public key to your account as below:
 
 install ssh related packages, then perform:
         ssh-keygen -t rsa -C "YOUR EMAIL ADDRESS"
