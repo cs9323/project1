@@ -47,7 +47,8 @@ fill in your commit message between double quotes, the COMMIT MESSAGE will be se
 finally you need to perform:
         git push to make sure the local repository is synced with the repository held by github.
 
-Everytime before you want to modify the code or add new files to repository, make sure you perform:        git pull
+Everytime before you want to modify the code or add new files to repository, make sure you perform
+        git pull
 
 when there is a warning about multiple or different version conflict, perform:
         git merge
